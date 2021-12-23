@@ -1,0 +1,1 @@
+# my-prolog-practice
