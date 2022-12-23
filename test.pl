@@ -77,3 +77,6 @@ summer([X|Xs],T) :- T #= S + X, summer(Xs,S).
 bst_member(X, bin(L, X, R)).
 bst_member(X, bin(L, Y, _)) :- X #< Y, bst_member(X, L).
 bst_member(X, bin(_, Y, R)) :- X #> Y, bst_member(X, R).
+
+element_at([_|Xs], K, Y) :- K2 #= K - 1, element_at(Xs, K2, Y).
+element_at([X|_], 1, X).
